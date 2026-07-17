@@ -33,6 +33,10 @@
                             DEFAULT: '#C5A880',
                             dark: '#A3845B',
                             light: '#E5D5C0'
+                        },
+                        line: {
+                            DEFAULT: '#06C755',
+                            dark: '#05B04B'
                         }
                     },
                     fontFamily: {
@@ -141,30 +145,36 @@
     </div>
 </header>
 
-<!-- Floating Action Button for Mobile Screens -->
+<!-- Floating Action Button for Mobile Screens (Google Maps Route + Phone Link) -->
 <div class="fixed bottom-0 left-0 right-0 z-40 lg:hidden grid grid-cols-2 shadow-2xl border-t border-gold-light bg-white/95 backdrop-blur-md">
     <a href="tel:0120-972-123" class="bg-stone-800 text-white font-bold py-4 text-center flex flex-col justify-center items-center gap-1 active:bg-stone-900 transition-all">
         <span class="text-xs text-stone-300 font-normal"><i class="fa-solid fa-phone-volume mr-1"></i>無料でお電話</span>
         <span class="text-base tracking-wide">0120-972-123</span>
     </a>
-    <a href="#ticket-section" class="bg-gold hover:bg-gold-dark text-stone-900 font-black py-4 text-center flex flex-col justify-center items-center gap-1 active:bg-gold-dark transition-all">
-        <span class="text-xs text-stone-800 font-bold"><i class="fa-solid fa-map-pin mr-1"></i>現地案内所</span>
-        <span class="text-base tracking-wide">ご来園案内はこちら</span>
+    <!-- Google Maps Route Navigation Link -->
+    <a href="https://maps.app.goo.gl/oLLDiSCHg9iFUQnF7" target="_blank" rel="noopener noreferrer" class="bg-gold hover:bg-gold-dark text-stone-900 font-black py-4 text-center flex flex-col justify-center items-center gap-1 active:bg-gold-dark transition-all">
+        <span class="text-xs text-stone-800 font-bold"><i class="fa-solid fa-map-location-dot mr-1"></i>ルート・ナビ案内</span>
+        <span class="text-base tracking-wide">Googleマップを開く</span>
     </a>
 </div>
 
 <!-- Floating Presentation Ticket Indicator on Desktop -->
 <div class="fixed bottom-6 right-6 z-40 hidden lg:flex flex-col items-end gap-3 pointer-events-none">
-    <div class="bg-emerald-50/95 backdrop-blur-sm border-2 border-emerald-800 p-4 rounded-2xl shadow-xl max-w-xs pointer-events-auto transform hover:scale-105 transition-all">
+    <div class="bg-emerald-50/95 backdrop-blur-sm border-2 border-emerald-800 p-4 rounded-2xl shadow-xl max-w-xs pointer-events-auto transform hover:scale-105 transition-all flex flex-col gap-2">
         <p class="text-emerald-800 font-black text-sm flex items-center gap-1">
             <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-800 animate-ping"></span>
             【ご来園の際】スマホ画面提示
         </p>
-        <p class="text-stone-700 text-xs mt-1 leading-relaxed">
+        <p class="text-stone-700 text-xs leading-relaxed">
             ご来園の際は管理事務所にお寄りいただき、この画面をスタッフにご提示ください。
         </p>
-        <a href="#ticket-section" class="mt-2 block text-center text-xs font-bold text-white bg-emerald-800 hover:bg-emerald-900 py-1.5 rounded-lg transition-colors">
+        <a href="#ticket-section" class="block text-center text-xs font-bold text-white bg-emerald-800 hover:bg-emerald-900 py-2 rounded-lg transition-colors">
             来園案内を表示
+        </a>
+        <!-- LINE Share Button for Desktop Floating Window -->
+        <a href="https://line.me/R/share?text=%e3%81%94%e5%ae%b6%e6%97%8f%e3%81%b8%e3%81%ae%e3%81%94%e7%b0%a1%e5%bc%8f%e5%85%b1%e6%9c%89%ef%bc%9a%e3%80%90%e5%85%ac%e5%bc%8f%e3%80%91%e5%ba%a7%e9%96%93%e3%83%aa%e3%83%90%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%89%e3%83%a1%e3%83%a2%e3%83%aa%e3%82%a2%e3%83%ab%e3%81%ae%e3%83%9a%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e3%82%b7%e3%82%a7%e3%82%a2%e3%81%97%e3%81%be%e3%81%99%e3%80%82%0ahttps://www.yahoo.co.jp/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 text-center text-xs font-bold text-white bg-line hover:bg-line-dark py-2 rounded-lg transition-colors shadow">
+            <i class="fa-brands fa-line text-sm"></i>
+            <span>LINEで家族に送る</span>
         </a>
     </div>
 </div>
@@ -266,16 +276,16 @@
 <section id="ticket-section" class="py-16 px-4 bg-emerald-50/50 relative z-20">
     <div class="max-w-4xl mx-auto">
         <div class="text-center mb-10">
-            <span class="text-emerald-800 font-black text-sm tracking-widest block mb-2"><i class="fa-solid fa-circle-info"></i> ご来園 of お願い</span>
+            <span class="text-emerald-800 font-black text-sm tracking-widest block mb-2"><i class="fa-solid fa-circle-info"></i> ご来園のお願い</span>
             <h2 class="serif-font text-2xl md:text-3xl font-bold text-stone-900">スマートフォンの画面提示について</h2>
             <div class="w-16 h-1 bg-emerald-700 mx-auto mt-4 rounded-full"></div>
         </div>
 
         <!-- Ticket Card Design -->
         <div class="relative bg-white border border-stone-200 rounded-3xl p-6 md:p-10 shadow-xl overflow-hidden">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6 z-10 relative">
-                <div class="space-y-4 text-center md:text-left">
-                    <span class="inline-block bg-stone-800 text-white text-xs font-bold px-3 py-1 rounded">
+            <div class="flex flex-col md:flex-row items-stretch justify-between gap-6 z-10 relative">
+                <div class="space-y-4 text-center md:text-left flex flex-col justify-center flex-grow">
+                    <span class="inline-block bg-stone-800 text-white text-xs font-bold px-3 py-1 rounded w-fit mx-auto md:mx-0">
                         管理事務所 提示用画面
                     </span>
                     <h3 class="serif-font text-xl md:text-2xl font-black text-stone-800 leading-tight">
@@ -286,12 +296,18 @@
                     </p>
                 </div>
                 
-                <!-- Ticket Badge Area -->
-                <div class="flex flex-col items-center bg-stone-50 border border-stone-200 p-6 rounded-2xl w-full md:w-auto min-w-[200px] shadow-sm">
+                <!-- Ticket Badge Area with LINE Share Button Integration -->
+                <div class="flex flex-col items-center bg-stone-50 border border-stone-200 p-6 rounded-2xl w-full md:w-auto min-w-[240px] shadow-sm shrink-0">
                     <i class="fa-solid fa-mobile-screen-button text-4xl text-stone-600 mb-3"></i>
                     <p class="text-xs text-stone-500 mb-1">管理事務所に寄るだけ</p>
                     <p class="text-lg font-black text-stone-800">スマホ画面提示</p>
                     <p class="text-[10px] text-emerald-800 font-bold bg-white px-3 py-1 rounded-full border border-emerald-100 mt-2">案内会随時受付</p>
+                    
+                    <!-- LINE Social Share Button -->
+                    <a href="https://line.me/R/share?text=%e3%80%90%e5%85%ac%e5%bc%8f%e3%80%91%e5%ba%a7%e9%96%93%e3%83%aa%e3%83%90%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%89%e3%83%a1%e3%83%a2%e3%83%aa%e3%82%a2%e3%83%ab%ef%bc%88%e5%8d%97%e9%a2%a8%e9%9c%8a%e5%9c%92%ef%bc%89%e3%81%ae%e3%83%9a%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e3%82%b7%e3%82%a7%e3%82%a2%e3%81%97%e3%81%be%e3%81%99%e3%80%82%e3%81%94%e6%9d%a5%e5%9c%92%e3%81%ae%e9%9a%9b%e3%81%af%e3%82%b9%e3%83%9e%e3%83%bb%e7%94%bb%e9%9d%a2%e3%82%92%e3%81%94%e6%8f%90%e7%a4%ba%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%82%0ahttps://www.yahoo.co.jp/" target="_blank" rel="noopener noreferrer" class="w-full mt-4 flex items-center justify-center gap-2 bg-line hover:bg-line-dark text-white font-bold py-2.5 px-4 rounded-xl shadow transition-all text-xs">
+                        <i class="fa-brands fa-line text-lg"></i>
+                        <span>この案内をLINEで家族に送る</span>
+                    </a>
                 </div>
             </div>
             
@@ -476,7 +492,7 @@
                 <!-- Text Side -->
                 <div class="lg:col-span-6 space-y-4">
                     <span class="text-gold-dark font-black text-xs tracking-wider bg-gold-light/30 px-3 py-1.5 rounded">特徴 その1</span>
-                    <h3 class="serif-font text-2xl md:text-3xl font-bold text-stone-900">大山を望み、相模川に隣接する最上級 of 周辺環境</h3>
+                    <h3 class="serif-font text-2xl md:text-3xl font-bold text-stone-900">大山を望み、相模川に隣接する最上級の周辺環境</h3>
                     <p class="text-stone-700 text-base md:text-lg leading-relaxed">
                         相模川の蕩々たる流れと厳かな姿を見せる霊峰大山。そして広く大きな天空が生きとし生けるものすべての、命のやすらぎを見守ります。爽やかな風がシュロの葉を揺らす、世俗を離れ清々しく静かで開放的な空間です。
                     </p>
@@ -613,7 +629,7 @@
             </div>
 
             <div class="mt-8 text-center">
-                <p class="text-stone-700 text-sm mb-4">「まずは何から始めればいいの？」という素朴な疑問で構いません。一度お気軽お尋ねください。</p>
+                <p class="text-stone-700 text-sm mb-4">「まずは何から始めればいいの？」という素朴な疑問で構いません。一度お気軽にお尋ねください。</p>
                 <a href="#inquiry" class="inline-flex items-center gap-2 bg-emerald-800 hover:bg-emerald-900 text-white font-bold py-3 px-8 rounded-full shadow-md transition-all text-sm">
                     <i class="fa-regular fa-comments"></i> 改葬・お引越しについて相談する
                 </a>
@@ -726,7 +742,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             
-            <!-- Left Side: Coordinates / Address Card -->
+            <!-- Left Side: Coordinates / Address Card & Touch Action Buttons -->
             <div class="lg:col-span-5 flex flex-col justify-between bg-sand-50 border border-stone-200 rounded-3xl p-6 md:p-8 shadow-sm">
                 <div class="space-y-6">
                     <div class="border-b border-stone-200 pb-4">
@@ -747,12 +763,20 @@
                     </div>
                 </div>
 
-                <!-- Touch Optimization Button: Interactive Maps App direct link -->
-                <div class="mt-8 space-y-4">
+                <!-- Touch Optimization Button Group -->
+                <div class="mt-8 space-y-3">
+                    <!-- Google Maps Route Activation -->
                     <a href="https://maps.app.goo.gl/oLLDiSCHg9iFUQnF7" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-emerald-800 hover:bg-emerald-900 text-white font-black py-4 px-6 rounded-full shadow-lg transition-transform hover:-translate-y-0.5 text-center text-base">
                         <i class="fa-solid fa-map-location-dot text-lg"></i>
                         <span>Googleマップでルート案内を開く</span>
                     </a>
+                    
+                    <!-- LINE Share Button for Access & Route Info -->
+                    <a href="https://line.me/R/share?text=%e3%80%90%e5%ba%a7%e9%96%93%e3%83%aa%e3%83%90%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%89%e3%83%a1%e3%83%a2%e3%83%aa%e3%82%a2%e3%83%ab%e3%80%91%e3%81%ae%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e6%a1%88%e5%86%85%e3%81%a7%e3%81%99%ef%bc%81%e5%9c%a8%e5%9c%b0%ef%bc%9a%e7%a5%9e%e5%a5%88%e5%b7%9d%e7%9c%8c%e5%ba%a7%e9%96%93%e5%b8%82%e6%96%b0%e7%94%b0%e5%ae%bf2174%ef%bc%88%e5%8e%9a%e6%9c%a8IC%e3%82%88%e3%82%8a7%e5%88%86%ef%bc%89%0ahttps://www.yahoo.co.jp/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-line hover:bg-line-dark text-white font-black py-3.5 px-6 rounded-full shadow transition-transform hover:-translate-y-0.5 text-center text-sm">
+                        <i class="fa-brands fa-line text-lg"></i>
+                        <span>アクセス情報をLINEで家族に送る</span>
+                    </a>
+                    
                     <p class="text-[11px] text-stone-500 text-center">※スマートフォンで開くとカーナビのように現在地から直接道案内が開始されます。</p>
                 </div>
             </div>
@@ -1146,9 +1170,11 @@
 
     function closeModal() {
         const modal = document.getElementById("image-modal");
+        const modalImg = document.getElementById("modal-img");
         modal.classList.add("opacity-0");
         setTimeout(() => {
             modal.classList.add("hidden");
+            modalImg.src = ""; // Clear memory
         }, 300);
     }
 
