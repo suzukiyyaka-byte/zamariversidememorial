@@ -98,6 +98,15 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #A3845B;
         }
+
+        /* 04.jpg 縦比率を3%拡大、ホバー時に縦横比を維持して拡大 */
+        .scale-y-expanded {
+            transform: scaleY(1.03);
+            transform-origin: center;
+        }
+        .group:hover .scale-y-expanded {
+            transform: scale(1.05, 1.0815); /* 1.03 * 1.05 = 1.0815 */
+        }
     </style>
 </head>
 <body class="overflow-x-hidden relative">
@@ -172,7 +181,7 @@
             来園案内を表示
         </a>
         <!-- LINE Share Button for Desktop Floating Window -->
-        <a href="https://line.me/R/share?text=%e3%81%94%e5%ae%b6%e6%97%8f%e3%81%b8%e3%81%ae%e3%81%94%e7%b0%a1%e5%bc%8f%e5%85%b1%e6%9c%89%ef%bc%9a%e3%80%90%e5%85%ac%e5%bc%8f%e3%80%91%e5%ba%a7%e9%96%93%e3%83%aa%e3%83%90%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%89%e3%83%a1%e3%83%a2%e3%83%aa%e3%82%a2%e3%83%ab%e3%81%ae%e3%83%9a%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e3%82%b7%e3%82%a7%e3%82%a2%e3%81%97%e3%81%be%e3%81%99%e3%80%82%0ahttps://suzukiyyaka-byte.github.io/zamariversidememorial/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 text-center text-xs font-bold text-white bg-line hover:bg-line-dark py-2 rounded-lg transition-colors shadow">
+        <a href="https://line.me/R/share?text=%e3%81%94%e5%ae%b6%e6%97%8f%e3%81%b8%e3%81%ae%e3%81%94%e7%b0%a1%e5%bc%8f%e5%85%b1%e6%9c%89%ef%bc%9a%e3%80%90%e5%85%ac%e5%bc%8f%e3%80%91%e5%ba%a7%e9%96%93%e3%83%aa%e3%83%90%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%89%e3%83%a1%e3%83%a2%e3%83%aa%e3%82%a2%e3%83%ab%e3%81%ae%e3%83%9a%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%8t%e3%82%92%e3%82%b7%e3%82%a7%e3%82%a2%e3%81%97%e3%81%be%e3%81%99%e3%80%82%0ahttps://www.yahoo.co.jp/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 text-center text-xs font-bold text-white bg-line hover:bg-line-dark py-2 rounded-lg transition-colors shadow">
             <i class="fa-brands fa-line text-sm"></i>
             <span>LINEで家族に送る</span>
         </a>
@@ -304,7 +313,7 @@
                     <p class="text-[10px] text-emerald-800 font-bold bg-white px-3 py-1 rounded-full border border-emerald-100 mt-2">案内会随時受付</p>
                     
                     <!-- LINE Social Share Button -->
-                    <a href="https://line.me/R/share?text=%e3%80%90%e5%85%ac%e5%bc%8f%e3%80%91%e5%ba%a7%e9%96%93%e3%83%aa%e3%83%90%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%89%e3%83%a1%e3%83%a2%e3%83%aa%e3%82%a2%e3%83%ab%ef%bc%88%e5%8d%97%e9%a2%a8%e9%9c%8a%e5%9c%92%ef%bc%89%e3%81%ae%e3%83%9a%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e3%82%b7%e3%82%a7%e3%82%a2%e3%81%97%e3%81%be%e3%81%99%e3%80%82%e3%81%94%e6%9d%a5%e5%9c%92%e3%81%ae%e9%9a%9b%e3%81%af%e3%82%b9%e3%83%9e%e3%83%bb%e7%94%bb%e9%9d%a2%e3%82%92%e3%81%94%e6%8f%90%e7%a4%ba%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%82%0ahttps://suzukiyyaka-byte.github.io/zamariversidememorial/" target="_blank" rel="noopener noreferrer" class="w-full mt-4 flex items-center justify-center gap-2 bg-line hover:bg-line-dark text-white font-bold py-2.5 px-4 rounded-xl shadow transition-all text-xs">
+                    <a href="https://line.me/R/share?text=%e3%80%90%e5%85%ac%e5%bc%8f%e3%80%91%e5%ba%a7%e9%96%93%e3%83%aa%e3%83%90%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%89%e3%83%a1%e3%83%a2%e3%83%aa%e3%82%a2%e3%83%ab%ef%bc%88%e5%8d%97%e9%a2%a8%e9%9c%8a%e5%9c%92%ef%bc%89%e3%81%ae%e3%83%9a%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%8t%e3%82%92%e3%82%b7%e3%82%a7%e3%82%a2%e3%81%97%e3%81%be%e3%81%99%e3%80%82%e3%81%94%e6%9d%a5%e5%9c%92%e3%81%ae%e9%9a%9b%e3%81%af%e3%82%b9%e3%83%9e%e3%83%bb%e7%94%bb%e9%9d%a2%e3%82%92%e3%81%94%e6%8f%90%e7%a4%ba%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%82%0ahttps://www.yahoo.co.jp/" target="_blank" rel="noopener noreferrer" class="w-full mt-4 flex items-center justify-center gap-2 bg-line hover:bg-line-dark text-white font-bold py-2.5 px-4 rounded-xl shadow transition-all text-xs">
                         <i class="fa-brands fa-line text-lg"></i>
                         <span>この案内をLINEで家族に送る</span>
                     </a>
@@ -379,10 +388,10 @@
                     <p class="text-[11px] text-stone-500 mt-2">※年間管理料が別途必要となります。詳細はスタッフまでお気軽にお尋ねください。</p>
                 </div>
 
-                <!-- 3D style mockup image box (04.jpg) - FIXED ASPECT RATIO 1.3:1 -->
-                <div class="mt-8 relative w-full rounded-xl overflow-hidden border border-stone-200 shadow-lg" style="aspect-ratio: 1.3 / 1;">
-                    <img src="04.jpg" alt="0.6㎡ 特別セット墓石 完成予想図" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="image-placeholder hidden flex-col items-center justify-center p-6 text-center bg-stone-100">
+                <!-- 3D style mockup image box (04.jpg) - ASPECT RATIO MATCHED TO 5:4 WITH object-contain TO PREVENT ANY CLIPPING -->
+                <div class="mt-8 relative w-full rounded-xl overflow-hidden border border-stone-200 shadow-lg bg-white" style="aspect-ratio: 5 / 4;">
+                    <img src="04.jpg" alt="0.6㎡ 特別セット墓石 完成予想図" class="w-full h-full object-contain transition-transform duration-700 scale-y-expanded" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="image-placeholder hidden flex-col items-center justify-center p-6 text-center bg-stone-100 h-full">
                         <i class="fa-solid fa-monument text-5xl text-gold-dark mb-3"></i>
                         <span class="font-bold text-stone-700">【0.6㎡ 特別セット墓石 04.jpg】</span>
                         <p class="text-xs text-stone-500 max-w-sm mt-1">安心の墓石代・永代使用料・基本彫刻・施工まですべて含まれた最上級墓碑セット</p>
@@ -772,7 +781,7 @@
                     </a>
                     
                     <!-- LINE Share Button for Access & Route Info -->
-                    <a href="https://line.me/R/share?text=%e3%80%90%e5%ba%a7%e9%96%93%e3%83%aa%e3%83%90%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%89%e3%83%a1%e3%83%a2%e3%83%aa%e3%82%a2%e3%83%ab%e3%80%91%e3%81%ae%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b9%e6%a1%88%e5%86%85%e3%81%a7%e3%81%99%ef%bc%81%e5%9c%a8%e5%9c%b0%ef%bc%9a%e7%a5%9e%e5%a5%88%e5%b7%9d%e7%9c%8c%e5%ba%a7%e9%96%93%e5%b8%82%e6%96%b0%e7%94%b0%e5%ae%bf2174%ef%bc%88%e5%8e%9a%e6%9c%a8IC%e3%82%88%e3%82%8a7%e5%88%86%ef%bc%89%0ahttps://suzukiyyaka-byte.github.io/zamariversidememorial/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-line hover:bg-line-dark text-white font-black py-3.5 px-6 rounded-full shadow transition-transform hover:-translate-y-0.5 text-center text-sm">
+                    <a href="https://line.me/R/share?text=%e3%0a%90%e5%ba%a7%e9%96%93%e3%83%aa%e3%83%90%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%89%e3%83%a1%e3%83%a2%e3%83%aa%e3%82%a2%e3%83%ab%e3%0a%91%e3%81%ae%e3%82%a2%e3%82%af%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e3%82%b7%e3%82%a7%e3%82%a2%e3%81%97%e3%81%be%e3%81%99%e3%80%82%e3%81%94%e6%9d%a5%e5%9c%92%e3%81%ae%e9%9a%9b%e3%81%af%e3%82%b9%e3%83%9e%e3%83%bb%e7%94%bb%e9%9d%a2%e3%82%92%e3%81%94%e6%8f%90%e7%a4%ba%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%82%0ahttps://www.yahoo.co.jp/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-line hover:bg-line-dark text-white font-black py-3.5 px-6 rounded-full shadow transition-transform hover:-translate-y-0.5 text-center text-sm">
                         <i class="fa-brands fa-line text-lg"></i>
                         <span>アクセス情報をLINEで家族に送る</span>
                     </a>
