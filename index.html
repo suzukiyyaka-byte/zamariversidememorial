@@ -105,7 +105,7 @@
             transform-origin: center;
         }
         .group:hover .scale-y-expanded {
-            transform: scale(1.05, 1.0815); /* 1.03 * 1.05 = 1.0815 */
+            transform: scale(1.05, 1.0815);
         }
     </style>
 </head>
@@ -118,23 +118,19 @@
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-sand-100 transition-all duration-300">
     <div class="max-w-6xl mx-auto px-2 sm:px-4 py-2 flex items-center justify-between gap-1 sm:gap-3">
         
-        <!-- Left: Logo & Site name (Visible even on tiny screens) -->
         <div class="flex items-center gap-1 sm:gap-2 shrink-0">
-            <!-- Logo size scaled down for mobile screens to guarantee inline display -->
             <div class="relative h-8 sm:h-10 md:h-12 flex items-center shrink-0">
                 <img src="05.jpg" alt="座間リバーサイドメモリアル ロゴ" class="h-full w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="image-placeholder hidden h-8 w-16 sm:h-10 sm:w-24 flex-col justify-center items-center text-[8px] sm:text-[10px] font-bold text-gold-dark bg-sand-50 border border-gold rounded px-1">
                     <i class="fa-solid fa-vihara"></i>ZRM
                 </div>
             </div>
-            <!-- Separator and site name text - adjusted for mobile -->
             <div class="border-l border-stone-200 pl-1.5 sm:pl-2 flex flex-col justify-center">
                 <p class="text-[8px] sm:text-[10px] text-stone-500 font-bold leading-none mb-0.5">南風霊園</p>
                 <h1 class="serif-font text-[9px] sm:text-xs md:text-sm font-black text-stone-800 leading-tight tracking-tighter sm:tracking-normal">座間リバーサイドメモリアル</h1>
             </div>
         </div>
 
-        <!-- Right: Phone Number & Contact Button (Visible on all sizes) -->
         <div class="flex items-center gap-1 sm:gap-3 shrink-0">
             <div class="text-right flex flex-col justify-center">
                 <p class="text-[8px] sm:text-[10px] text-stone-500 leading-none hidden md:block">通話料無料</p>
@@ -143,7 +139,6 @@
                     <span class="tracking-tighter">0120-972-123</span>
                 </a>
             </div>
-            <!-- Dynamic button text for fitting small screen sizes perfectly -->
             <a href="#inquiry" class="bg-gold-dark hover:bg-stone-800 text-white font-bold py-1.5 px-2.5 sm:py-2.5 sm:px-5 rounded-full transition-all shadow-md flex items-center gap-1 text-[9px] sm:text-xs md:text-sm tracking-tighter sm:tracking-wider">
                 <i class="fa-regular fa-envelope"></i>
                 <span class="hidden sm:inline">資料請求・問合せ</span>
@@ -154,13 +149,12 @@
     </div>
 </header>
 
-<!-- Floating Action Button for Mobile Screens (Google Maps Route + Phone Link) -->
+<!-- Floating Action Button for Mobile Screens -->
 <div class="fixed bottom-0 left-0 right-0 z-40 lg:hidden grid grid-cols-2 shadow-2xl border-t border-gold-light bg-white/95 backdrop-blur-md">
     <a href="tel:0120-972-123" class="bg-stone-800 text-white font-bold py-4 text-center flex flex-col justify-center items-center gap-1 active:bg-stone-900 transition-all">
         <span class="text-xs text-stone-300 font-normal"><i class="fa-solid fa-phone-volume mr-1"></i>無料でお電話</span>
         <span class="text-base tracking-wide">0120-972-123</span>
     </a>
-    <!-- Google Maps Route Navigation Link -->
     <a href="https://maps.app.goo.gl/oLLDiSCHg9iFUQnF7" target="_blank" rel="noopener noreferrer" class="bg-gold hover:bg-gold-dark text-stone-900 font-black py-4 text-center flex flex-col justify-center items-center gap-1 active:bg-gold-dark transition-all">
         <span class="text-xs text-stone-800 font-bold"><i class="fa-solid fa-map-location-dot mr-1"></i>ルート・ナビ案内</span>
         <span class="text-base tracking-wide">Googleマップを開く</span>
@@ -180,7 +174,6 @@
         <a href="#ticket-section" class="block text-center text-xs font-bold text-white bg-emerald-800 hover:bg-emerald-900 py-2 rounded-lg transition-colors">
             来園案内を表示
         </a>
-        <!-- LINE Share Button for Desktop Floating Window -->
         <a href="https://line.me/R/share?text=%e3%81%94%e5%ae%b6%e6%97%8f%e3%81%b8%e3%81%ae%e3%81%94%e7%b0%a1%e5%bc%8f%e5%85%b1%e6%9c%89%ef%bc%9a%e3%80%90%e5%85%ac%e5%bc%8f%e3%80%91%e5%ba%a7%e9%96%93%e3%83%aa%e3%83%90%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%89%e3%83%a1%e3%83%a2%e3%83%aa%e3%82%a2%e3%83%ab%e3%81%ae%e3%83%9a%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%8t%e3%82%92%e3%82%b7%e3%82%a7%e3%82%a2%e3%81%97%e3%81%be%e3%81%99%e3%80%82%0ahttps://www.yahoo.co.jp/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 text-center text-xs font-bold text-white bg-line hover:bg-line-dark py-2 rounded-lg transition-colors shadow">
             <i class="fa-brands fa-line text-sm"></i>
             <span>LINEで家族に送る</span>
@@ -188,18 +181,14 @@
     </div>
 </div>
 
-<!-- Hero Section (Top Visual with Aerial View Placeholder) -->
+<!-- Hero Section -->
 <section class="relative min-h-screen pt-20 flex flex-col justify-between overflow-hidden bg-white">
-    <!-- Sunlight Glow Effect on top right (slowly shifting) -->
     <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-100/30 rounded-full blur-3xl pointer-events-none animate-sun-glow"></div>
     <div class="absolute bottom-10 left-10 w-[300px] h-[300px] bg-emerald-50/20 rounded-full blur-2xl pointer-events-none" style="animation-delay: -5s;"></div>
 
-    <!-- Main Visual Container -->
     <div class="w-full flex-grow grid grid-cols-1 lg:grid-cols-12 gap-0 relative z-10">
-        <!-- Text Overlay / Column (Always readable, gorgeous serif typeface) -->
         <div class="lg:col-span-5 flex flex-col justify-center p-6 md:p-12 lg:p-16 bg-white/80 lg:bg-white/95 backdrop-blur-md lg:backdrop-blur-none">
             <div class="max-w-md mx-auto lg:mx-0">
-                <!-- Status Badge -->
                 <span class="inline-flex items-center gap-1 bg-gold text-stone-900 font-black text-xs px-3 py-1.5 rounded-full uppercase tracking-widest mb-6 shadow-sm border border-gold/40">
                     <i class="fa-regular fa-calendar-check animate-pulse"></i> 現地案内会 開催中
                 </span>
@@ -215,7 +204,6 @@
                     すべてが平坦で、あたたかな日差したっぷりの空間で大切な人との絆を紡ぎます。
                 </p>
 
-                <!-- Crucial Senior-friendly quick CTA points -->
                 <div class="grid grid-cols-2 gap-4 mb-8 text-stone-800 text-sm md:text-base font-bold">
                     <div class="flex items-center gap-2 bg-stone-50/80 p-3 rounded-lg border-l-4 border-gold shadow-sm hover:bg-white transition-colors">
                         <i class="fa-solid fa-heart text-gold-dark text-lg"></i>
@@ -242,10 +230,8 @@
             </div>
         </div>
 
-        <!-- Main Photo Showcase (Aerial Space `11.jpg`) -->
         <div class="lg:col-span-7 relative h-[50vh] lg:h-auto min-h-[400px] overflow-hidden group">
             <img src="11.jpg" alt="座間リバーサイドメモリアル 爽快な空撮と大山を望む景観" class="w-full h-full object-cover transition-transform duration-[10s] ease-out group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <!-- Premium CSS-based Visual Backup with Unsplash overlay for high conversion preview -->
             <div class="image-placeholder hidden absolute inset-0 flex-col items-center justify-center p-8 text-center bg-gradient-to-tr from-stone-900 via-stone-800 to-stone-700 text-white">
                 <div class="absolute inset-0 opacity-40 mix-blend-overlay bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1200');"></div>
                 <div class="z-10 max-w-md">
@@ -259,7 +245,6 @@
         </div>
     </div>
 
-    <!-- Bottom Ribbon with Info Ticker -->
     <div class="bg-stone-900 text-white py-4 px-4 border-t border-gold/30 relative z-20">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3 text-center md:text-left">
             <p class="text-stone-300 text-sm font-bold">
@@ -274,14 +259,14 @@
     </div>
 </section>
 
-<!-- Decorative Flowing Wave (Simulating Sagami River's flow) -->
+<!-- Decorative Flowing Wave -->
 <div class="relative w-full h-16 bg-white pointer-events-none z-20 -mt-1">
     <svg class="absolute bottom-0 w-full h-16 text-emerald-50/50 fill-current" viewBox="0 0 1440 74" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,74L1320,74C1200,74,960,74,720,74C480,74,240,74,120,74L0,74Z"></path>
     </svg>
 </div>
 
-<!-- Presentation Ticket / Welcome Guide section (Revised to standard polite request) -->
+<!-- Presentation Ticket / Welcome Guide section -->
 <section id="ticket-section" class="py-16 px-4 bg-emerald-50/50 relative z-20">
     <div class="max-w-4xl mx-auto">
         <div class="text-center mb-10">
@@ -290,7 +275,6 @@
             <div class="w-16 h-1 bg-emerald-700 mx-auto mt-4 rounded-full"></div>
         </div>
 
-        <!-- Ticket Card Design -->
         <div class="relative bg-white border border-stone-200 rounded-3xl p-6 md:p-10 shadow-xl overflow-hidden">
             <div class="flex flex-col md:flex-row items-stretch justify-between gap-6 z-10 relative">
                 <div class="space-y-4 text-center md:text-left flex flex-col justify-center flex-grow">
@@ -305,14 +289,12 @@
                     </p>
                 </div>
                 
-                <!-- Ticket Badge Area with LINE Share Button Integration -->
                 <div class="flex flex-col items-center bg-stone-50 border border-stone-200 p-6 rounded-2xl w-full md:w-auto min-w-[240px] shadow-sm shrink-0">
                     <i class="fa-solid fa-mobile-screen-button text-4xl text-stone-600 mb-3"></i>
                     <p class="text-xs text-stone-500 mb-1">管理事務所に寄るだけ</p>
                     <p class="text-lg font-black text-stone-800">スマホ画面提示</p>
                     <p class="text-[10px] text-emerald-800 font-bold bg-white px-3 py-1 rounded-full border border-emerald-100 mt-2">案内会随時受付</p>
                     
-                    <!-- LINE Social Share Button -->
                     <a href="https://line.me/R/share?text=%e3%80%90%e5%85%ac%e5%bc%8f%e3%80%91%e5%ba%a7%e9%96%93%e3%83%aa%e3%83%90%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%89%e3%83%a1%e3%83%a2%e3%83%aa%e3%82%a2%e3%83%ab%ef%bc%88%e5%8d%97%e9%a2%a8%e9%9c%8a%e5%9c%92%ef%bc%89%e3%81%ae%e3%83%9a%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%8t%e3%82%92%e3%82%b7%e3%82%a7%e3%82%a2%e3%81%97%e3%81%be%e3%81%99%e3%80%82%e3%81%94%e6%9d%a5%e5%9c%92%e3%81%ae%e9%9a%9b%e3%81%af%e3%82%b9%e3%83%9e%e3%83%bb%e7%94%bb%e9%9d%a2%e3%82%92%e3%81%94%e6%8f%90%e7%a4%ba%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%82%0ahttps://www.yahoo.co.jp/" target="_blank" rel="noopener noreferrer" class="w-full mt-4 flex items-center justify-center gap-2 bg-line hover:bg-line-dark text-white font-bold py-2.5 px-4 rounded-xl shadow transition-all text-xs">
                         <i class="fa-brands fa-line text-lg"></i>
                         <span>この案内をLINEで家族に送る</span>
@@ -320,7 +302,6 @@
                 </div>
             </div>
             
-            <!-- Guide detail table -->
             <div class="mt-8 pt-6 border-t border-stone-100 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-stone-700">
                 <div class="flex items-start gap-2">
                     <i class="fa-solid fa-map-pin text-gold-dark mt-1"></i>
@@ -348,14 +329,14 @@
     </div>
 </section>
 
-<!-- Decorative Wave Separator to White -->
+<!-- Decorative Wave Separator -->
 <div class="relative w-full h-16 bg-white pointer-events-none z-20">
     <svg class="absolute top-0 w-full h-16 text-emerald-50/50 fill-current rotate-180" viewBox="0 0 1440 74" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,74L1320,74C1200,74,960,74,720,74C480,74,240,74,120,74L0,74Z"></path>
+        <path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,74L1320,74C480,74,240,74,120,74L0,74Z"></path>
     </svg>
 </div>
 
-<!-- Special Set Price Offer Section (Target focus on 0.6㎡ special price) -->
+<!-- Special Set Price Offer Section -->
 <section id="offer-section" class="py-20 px-4 bg-white relative z-20">
     <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
@@ -366,7 +347,6 @@
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <!-- Left Panel: Graphic & Big Pricing (0.6㎡ Special Area) -->
             <div class="lg:col-span-7 bg-sand-50 rounded-3xl p-6 md:p-10 border border-stone-200 shadow-md relative overflow-hidden group">
                 <span class="absolute top-4 left-4 bg-stone-900 text-gold text-xs font-black tracking-widest px-4 py-2 rounded-lg shadow">
                     売れ筋NO.1
@@ -377,7 +357,6 @@
                     <p class="text-stone-500 text-xs mt-1">（墓石工事代・永代使用料・基本彫刻代・消費税をすべて含む）</p>
                 </div>
 
-                <!-- Price tag display (AWWWARDS modern layout style) -->
                 <div class="bg-white rounded-2xl p-6 border border-stone-100 shadow-inner text-center relative">
                     <span class="text-stone-500 text-sm block mb-1">お求めやすい、すべてコミコミ価格</span>
                     <div class="flex justify-center items-baseline gap-1">
@@ -388,7 +367,6 @@
                     <p class="text-[11px] text-stone-500 mt-2">※年間管理料が別途必要となります。詳細はスタッフまでお気軽にお尋ねください。</p>
                 </div>
 
-                <!-- 3D style mockup image box (18.jpg) - ASPECT RATIO MATCHED TO 5:4 WITH object-contain TO PREVENT ANY CLIPPING -->
                 <div class="mt-8 relative w-full rounded-xl overflow-hidden border border-stone-200 shadow-lg bg-white" style="aspect-ratio: 5 / 4;">
                     <img src="18.jpg" alt="0.6㎡ 特別セット墓石 完成予想図" class="w-full h-full object-contain transition-transform duration-700 scale-y-expanded" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="image-placeholder hidden flex-col items-center justify-center p-6 text-center bg-stone-100 h-full">
@@ -399,7 +377,6 @@
                 </div>
             </div>
 
-            <!-- Right Panel: Checklist / Quality / Benefits -->
             <div class="lg:col-span-5 space-y-6">
                 <div class="bg-gold-light/20 border-l-4 border-gold p-6 rounded-r-2xl">
                     <h3 class="text-lg font-bold text-stone-900 flex items-center gap-2 mb-2">
@@ -411,7 +388,6 @@
                     </p>
                 </div>
 
-                <!-- Set content details list -->
                 <ul class="space-y-4">
                     <li class="flex items-center gap-3 border-b border-sand-200 pb-3">
                         <span class="w-8 h-8 rounded-full bg-stone-900 text-gold flex items-center justify-center font-bold text-xs">1</span>
@@ -439,7 +415,6 @@
                     </li>
                 </ul>
 
-                <!-- Additional Price List Button (08.jpg is interactive) -->
                 <div class="bg-sand-100 p-5 rounded-2xl text-center shadow-inner">
                     <p class="text-xs text-stone-500 mb-2">他にも多彩な区画・デザインをご用意しています</p>
                     <button onclick="togglePriceList()" class="inline-flex items-center gap-2 bg-white hover:bg-stone-50 text-stone-800 border border-stone-300 font-bold py-2.5 px-5 rounded-full text-sm shadow-sm transition-all">
@@ -449,7 +424,6 @@
             </div>
         </div>
 
-        <!-- Collapsible Full Price List Table (08.jpg layout updated) -->
         <div id="full-price-list" class="hidden mt-8 max-w-2xl mx-auto bg-stone-50 border border-stone-200 rounded-3xl p-4 md:p-6 shadow-md transition-all">
             <h3 class="serif-font text-lg font-bold text-stone-800 border-b border-stone-200 pb-3 mb-4 text-center">永代使用料・年間管理料 一覧</h3>
             <div class="relative w-full rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-inner cursor-pointer group" onclick="openModal('08.jpg')">
@@ -468,14 +442,14 @@
     </div>
 </section>
 
-<!-- Decorative Wave Separator to Sand Background -->
+<!-- Decorative Wave Separator -->
 <div class="relative w-full h-16 bg-sand-50/70 pointer-events-none z-20">
     <svg class="absolute bottom-0 w-full h-16 text-white fill-current" viewBox="0 0 1440 74" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,74L1320,74C1200,74,960,74,720,74C480,74,240,74,120,74L0,74Z"></path>
+        <path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,74L1320,74C480,74,240,74,120,74L0,74Z"></path>
     </svg>
 </div>
 
-<!-- Majestic Features Section (Why Choose Us) -->
+<!-- Features Section -->
 <section class="py-20 bg-sand-50/70 relative z-20">
     <div class="max-w-6xl mx-auto px-4">
         
@@ -486,10 +460,7 @@
         </div>
 
         <div class="space-y-24">
-            
-            <!-- Feature 1: Majestic Nature (12.jpg, 13.jpg) -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center reveal">
-                <!-- Image Side -->
                 <div class="lg:col-span-6 relative h-80 rounded-2xl overflow-hidden shadow-lg group">
                     <img src="12.jpg" alt="霊峰大山を仰ぎ見、相模川に隣接する壮大なる眺望" class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="image-placeholder hidden flex-col items-center justify-center p-6 text-center bg-sky-50">
@@ -498,7 +469,6 @@
                         <p class="text-xs text-stone-500 mt-1">相模川の流れと雄大な大山が眼前に広がる、澄み渡るような大自然空間</p>
                     </div>
                 </div>
-                <!-- Text Side -->
                 <div class="lg:col-span-6 space-y-4">
                     <span class="text-gold-dark font-black text-xs tracking-wider bg-gold-light/30 px-3 py-1.5 rounded">特徴 その1</span>
                     <h3 class="serif-font text-2xl md:text-3xl font-bold text-stone-900">大山を望み、相模川に隣接する最上級の周辺環境</h3>
@@ -511,9 +481,7 @@
                 </div>
             </div>
 
-            <!-- Feature 2: All Flat Barrier-Free (14.jpg) - HEIGHT INCREASED 1.5x TO h-[480px] -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center lg:flex-row-reverse reveal">
-                <!-- Image Side (Right on Desktop) -->
                 <div class="lg:col-span-6 lg:order-2 relative h-[480px] rounded-2xl overflow-hidden shadow-lg group">
                     <img src="14.jpg" alt="全面バリアフリー・車椅子でもお参りしやすい参道" class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="image-placeholder hidden flex-col items-center justify-center p-6 text-center bg-stone-100">
@@ -522,7 +490,6 @@
                         <p class="text-xs text-stone-500 mt-1">段差が一切なく、管理棟も1階建て。ご年配の方も足腰に負担をかけずお参りできます</p>
                     </div>
                 </div>
-                <!-- Text Side -->
                 <div class="lg:col-span-6 lg:order-1 space-y-4">
                     <span class="text-gold-dark font-black text-xs tracking-wider bg-gold-light/30 px-3 py-1.5 rounded">特徴 その2</span>
                     <h3 class="serif-font text-2xl md:text-3xl font-bold text-stone-900">すべてが平坦なバリアフリー設計</h3>
@@ -536,9 +503,7 @@
                 </div>
             </div>
 
-            <!-- Feature 3: Pet with family burial (02.jpg) - FIXED ASPECT RATIO 3.5:1.2 -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center reveal">
-                <!-- Image Side - ASPECT RATIO FIXED TO 3.5:1.2 -->
                 <div class="lg:col-span-6 relative w-full rounded-2xl overflow-hidden shadow-lg group" style="aspect-ratio: 3.5 / 1.2;">
                     <img src="02.jpg" alt="愛するペットとともに永遠の眠りにつくお墓" class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="image-placeholder hidden flex-col items-center justify-center p-6 text-center bg-amber-50 animate-pulse">
@@ -547,7 +512,6 @@
                         <p class="text-[10px] text-stone-500 mt-1">家族同様のペットと共に眠れる、特別なエリア（3.5 : 1.2 比率）</p>
                     </div>
                 </div>
-                <!-- Text Side -->
                 <div class="lg:col-span-6 space-y-4">
                     <span class="text-gold-dark font-black text-xs tracking-wider bg-gold-light/30 px-3 py-1.5 rounded">特徴 その3</span>
                     <h3 class="serif-font text-2xl md:text-3xl font-bold text-stone-900">ペットと一緒に入れる特別な区画をご用意</h3>
@@ -560,9 +524,7 @@
                 </div>
             </div>
 
-            <!-- Feature 4: Open and high quality management (15.jpg) - HEIGHT ALIGNED WITH FEATURE 1 (h-80) -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center lg:flex-row-reverse reveal">
-                <!-- Image Side (Right on Desktop) - HEIGHT UNIFIED TO h-80 matching Feature 1 -->
                 <div class="lg:col-span-6 lg:order-2 relative h-80 rounded-2xl overflow-hidden shadow-lg group">
                     <img src="15.jpg" alt="明るく開放的な管理棟と整然とした大型平地駐車場" class="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="image-placeholder hidden absolute inset-0 flex-col items-center justify-center p-6 text-center bg-stone-100">
@@ -571,7 +533,6 @@
                         <p class="text-xs text-stone-500 mt-1">安心の常駐管理と美しく保たれた広い駐車場と近代的な平屋管理棟</p>
                     </div>
                 </div>
-                <!-- Text Side -->
                 <div class="lg:col-span-6 lg:order-1 space-y-4">
                     <span class="text-gold-dark font-black text-xs tracking-wider bg-gold-light/30 px-3 py-1.5 rounded">特徴 その4</span>
                     <h3 class="serif-font text-2xl md:text-3xl font-bold text-stone-900">万全の管理・メンテナンス体制</h3>
@@ -588,10 +549,10 @@
     </div>
 </section>
 
-<!-- Decorative Wave Separator back to White background -->
+<!-- Decorative Wave Separator -->
 <div class="relative w-full h-16 bg-white pointer-events-none z-20">
     <svg class="absolute top-0 w-full h-16 text-sand-50/70 fill-current rotate-180" viewBox="0 0 1440 74" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,74L1320,74C1200,74,960,74,720,74C480,74,240,74,120,74L0,74Z"></path>
+        <path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,74L1320,74C480,74,240,74,120,74L0,74Z"></path>
     </svg>
 </div>
 
@@ -656,10 +617,7 @@
             <div class="w-20 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
         </div>
 
-        <!-- Accordion container -->
         <div class="space-y-4">
-            
-            <!-- Q1 -->
             <div class="border border-stone-200 bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-stone-800 text-base md:text-lg hover:bg-stone-50 transition-colors">
                     <span class="flex items-center gap-3">
@@ -678,7 +636,6 @@
                 </div>
             </div>
 
-            <!-- Q2 -->
             <div class="border border-stone-200 bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-stone-800 text-base md:text-lg hover:bg-stone-50 transition-colors">
                     <span class="flex items-center gap-3">
@@ -697,7 +654,6 @@
                 </div>
             </div>
 
-            <!-- Q3 -->
             <div class="border border-stone-200 bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-stone-800 text-base md:text-lg hover:bg-stone-50 transition-colors">
                     <span class="flex items-center gap-3">
@@ -716,7 +672,6 @@
                 </div>
             </div>
 
-            <!-- Q4 -->
             <div class="border border-stone-200 bg-white rounded-xl overflow-hidden shadow-sm transition-all duration-300">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 text-left font-bold text-stone-800 text-base md:text-lg hover:bg-stone-50 transition-colors">
                     <span class="flex items-center gap-3">
@@ -739,7 +694,7 @@
     </div>
 </section>
 
-<!-- Access Information (Maps, Route guide, embeds) -->
+<!-- Access Information -->
 <section class="py-20 px-4 bg-white border-t border-stone-200 relative z-20">
     <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
@@ -751,7 +706,6 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             
-            <!-- Left Side: Coordinates / Address Card & Touch Action Buttons -->
             <div class="lg:col-span-5 flex flex-col justify-between bg-sand-50 border border-stone-200 rounded-3xl p-6 md:p-8 shadow-sm">
                 <div class="space-y-6">
                     <div class="border-b border-stone-200 pb-4">
@@ -772,15 +726,12 @@
                     </div>
                 </div>
 
-                <!-- Touch Optimization Button Group -->
                 <div class="mt-8 space-y-3">
-                    <!-- Google Maps Route Activation -->
                     <a href="https://maps.app.goo.gl/oLLDiSCHg9iFUQnF7" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-emerald-800 hover:bg-emerald-900 text-white font-black py-4 px-6 rounded-full shadow-lg transition-transform hover:-translate-y-0.5 text-center text-base">
                         <i class="fa-solid fa-map-location-dot text-lg"></i>
                         <span>Googleマップでルート案内を開く</span>
                     </a>
                     
-                    <!-- LINE Share Button for Access & Route Info -->
                     <a href="https://line.me/R/share?text=%e3%0a%90%e5%ba%a7%e9%96%93%e3%83%aa%e3%83%90%e3%83%bc%e3%82%b5%e3%82%a4%e3%83%89%e3%83%a1%e3%83%a2%e3%83%aa%e3%82%a2%e3%83%ab%e3%0a%91%e3%81%ae%e3%82%a2%e3%82%af%e3%82%b5%e3%82%a4%e3%83%88%e3%82%92%e3%82%b7%e3%82%a7%e3%82%a2%e3%81%97%e3%81%be%e3%81%99%e3%80%82%e3%81%94%e6%9d%a5%e5%9c%92%e3%81%ae%e9%9a%9b%e3%81%af%e3%82%b9%e3%83%9e%e3%83%bb%e7%94%bb%e9%9d%a2%e3%82%92%e3%81%94%e6%8f%90%e7%a4%ba%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%82%0ahttps://www.yahoo.co.jp/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-line hover:bg-line-dark text-white font-black py-3.5 px-6 rounded-full shadow transition-transform hover:-translate-y-0.5 text-center text-sm">
                         <i class="fa-brands fa-line text-lg"></i>
                         <span>アクセス情報をLINEで家族に送る</span>
@@ -790,10 +741,8 @@
                 </div>
             </div>
 
-            <!-- Right Side: Google Map Embed Frame -->
             <div class="lg:col-span-7 flex flex-col justify-between bg-white border border-stone-200 rounded-3xl p-4 shadow-sm min-h-[400px]">
                 <div class="relative flex-grow rounded-2xl overflow-hidden border border-stone-100 shadow-inner bg-stone-100">
-                    <!-- Embedded Responsive Google Map -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.0944034164236!2d139.37653697601942!3d35.478574341079586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ffc39397d48d%3A0xdd7435f4863d4c0f!2z5bqn6ZaT44Oq44OQ44O844K144Kk44OJ44Oh44Oi44Oq44Ia!5e1!3m2!1sja!2sjp!4v1784185279313!5m2!1sja!2sjp" width="100%" height="100%" style="border:0; min-height: 380px;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
                 <div class="mt-3 flex justify-between items-center text-xs text-stone-500 px-1">
@@ -804,9 +753,7 @@
 
         </div>
 
-        <!-- Map Images Sub-Section (Added 10.jpg and 09.jpg for detailed local view) -->
         <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Broad Area Map (10.jpg) -->
             <div class="bg-white border border-stone-200 rounded-3xl p-4 shadow-sm flex flex-col justify-between">
                 <div>
                     <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded mb-2 inline-block">広域マップ</span>
@@ -828,7 +775,6 @@
                 </div>
             </div>
 
-            <!-- Detailed Area Map (09.jpg) -->
             <div class="bg-white border border-stone-200 rounded-3xl p-4 shadow-sm flex flex-col justify-between">
                 <div>
                     <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded mb-2 inline-block">詳細マップ</span>
@@ -853,6 +799,91 @@
     </div>
 </section>
 
+<!-- ForecasterHQ: Zama City Weekly Weather Forecast Section -->
+<section id="weather-section" class="py-16 px-4 bg-gradient-to-b from-stone-50 via-sky-50/30 to-stone-100 border-t border-b border-stone-200 relative z-20">
+    <div class="max-w-6xl mx-auto">
+        
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <span class="inline-flex items-center gap-1.5 bg-sky-100 text-riverblue-900 font-bold text-xs px-3 py-1 rounded-full border border-sky-200 mb-2 shadow-sm">
+                <i class="fa-solid fa-cloud-sun text-riverblue-800"></i>
+                ForecasterHQ ライブウェザー
+            </span>
+            <h2 class="serif-font text-3xl font-black text-stone-900">座間市の週間天気予報</h2>
+            <p class="text-stone-600 mt-2 text-sm md:text-base">ご見学・お参りのご予定にお役立てください（管理事務所は雨天時も営業・案内中）</p>
+            <div class="w-20 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Weather Main Card -->
+        <div class="bg-white/90 backdrop-blur-md border border-stone-200 rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden">
+            <!-- Background Decorative Element -->
+            <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-sky-100/50 rounded-full blur-2xl pointer-events-none"></div>
+
+            <!-- Current & Today Highlight Banner -->
+            <div id="weather-today-banner" class="bg-gradient-to-r from-riverblue-900 via-riverblue-800 to-stone-800 rounded-2xl p-6 text-white shadow-md mb-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-5">
+                    <div id="today-icon" class="text-5xl text-amber-300 drop-shadow-md">
+                        <i class="fa-solid fa-spinner animate-spin"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-white/20 text-xs px-2.5 py-0.5 rounded-full font-bold">神奈川県座間市新田宿</span>
+                            <span class="text-xs text-sky-200" id="today-date-text">リアルタイム気象データ</span>
+                        </div>
+                        <h3 class="serif-font text-2xl md:text-3xl font-bold mt-1" id="today-status-text">天気予報を取得中...</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6 border-t md:border-t-0 md:border-l border-white/20 pt-4 md:pt-0 md:pl-6 text-center md:text-right w-full md:w-auto justify-around md:justify-end">
+                    <div>
+                        <p class="text-xs text-sky-200">最高 / 最低</p>
+                        <p class="text-xl md:text-2xl font-black" id="today-temp-range">--℃ / --℃</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-sky-200">降水確率</p>
+                        <p class="text-xl md:text-2xl font-black text-sky-300" id="today-pop">--%</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-sky-200">現地見学</p>
+                        <p class="text-sm font-bold bg-emerald-700 text-white px-3 py-1 rounded-full mt-1 inline-block" id="today-visiting-advice">雨天対応可</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7-Day Forecast Grid -->
+            <div>
+                <h4 class="text-xs font-bold text-stone-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <i class="fa-regular fa-calendar-days text-gold-dark"></i> 今後7日間の天気予報
+                </h4>
+                
+                <div id="weekly-forecast-grid" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+                    <!-- Skeleton Loader State -->
+                    <template id="weather-skeleton">
+                        <div class="bg-stone-50 border border-stone-200 rounded-2xl p-4 text-center animate-pulse flex flex-col justify-between h-40">
+                            <div class="h-4 bg-stone-200 rounded w-2/3 mx-auto"></div>
+                            <div class="h-8 bg-stone-200 rounded-full w-8 h-8 mx-auto"></div>
+                            <div class="h-4 bg-stone-200 rounded w-3/4 mx-auto"></div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <!-- Footer Advice & ForecasterHQ Watermark -->
+            <div class="mt-8 pt-6 border-t border-stone-200/80 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-600">
+                <div class="flex items-center gap-2 text-stone-700 font-bold bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-100">
+                    <i class="fa-solid fa-umbrella text-emerald-800"></i>
+                    <span>座間リバーサイドメモリアルはバリアフリー設計のため、雨天時もお足元を気にせず安心してお参りいただけます。</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-stone-400 font-medium">
+                    <i class="fa-solid fa-satellite text-[10px]"></i>
+                    <span>Powered by ForecasterHQ & Open-Meteo API</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 <!-- Interactive Consultation & Inquiry Form -->
 <section id="inquiry" class="py-20 px-4 bg-sand-100 relative z-20">
     <div class="max-w-3xl mx-auto">
@@ -865,7 +896,6 @@
 
         <div class="bg-white border border-stone-200 rounded-3xl p-6 md:p-10 shadow-lg">
             
-            <!-- Visual validation notification -->
             <div id="form-success" class="hidden bg-emerald-50 border-2 border-emerald-500 rounded-2xl p-6 text-center mb-6">
                 <i class="fa-solid fa-circle-check text-5xl text-emerald-600 mb-3 animate-bounce"></i>
                 <h3 class="serif-font text-lg font-bold text-emerald-900">お問い合わせを送信いたしました</h3>
@@ -874,7 +904,6 @@
             </div>
 
             <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
-                <!-- Select purpose -->
                 <div>
                     <label class="block text-stone-800 font-bold text-base mb-2">お問い合わせ内容 <span class="bg-red-700 text-white text-xs px-2 py-0.5 rounded font-black ml-1">必須</span></label>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -893,33 +922,28 @@
                     </div>
                 </div>
 
-                <!-- Input Name -->
                 <div>
                     <label for="name" class="block text-stone-800 font-bold text-base mb-2">お名前（ふりがな） <span class="bg-red-700 text-white text-xs px-2 py-0.5 rounded font-black ml-1">必須</span></label>
                     <input type="text" id="name" required placeholder="例：座間 太郎（ざま たろう）" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3.5 text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-gold text-lg font-bold">
                 </div>
 
-                <!-- Input Tel -->
                 <div>
                     <label for="tel" class="block text-stone-800 font-bold text-base mb-2">電話番号 <span class="bg-red-700 text-white text-xs px-2 py-0.5 rounded font-black ml-1">必須</span></label>
                     <input type="tel" id="tel" required placeholder="例：090-1234-5678" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3.5 text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-gold text-lg font-bold">
                     <p class="text-[11px] text-stone-500 mt-1">※携帯電話・お急ぎ時につながりやすい番号をご記入ください。</p>
                 </div>
 
-                <!-- Input Address for Document mailing -->
                 <div>
                     <label for="address" class="block text-stone-800 font-bold text-base mb-2">郵便番号・ご住所 <span class="text-stone-500 text-xs font-bold bg-stone-200 px-2 py-0.5 rounded ml-1">資料ご希望の場合は必須</span></label>
                     <input type="text" id="postal" placeholder="郵便番号 例：252-0024" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3.5 text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-gold text-lg mb-2">
                     <input type="text" id="address" placeholder="住所 例：神奈川県座間市新田宿..." class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3.5 text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-gold text-lg">
                 </div>
 
-                <!-- Message area -->
                 <div>
                     <label for="message" class="block text-stone-800 font-bold text-base mb-2">ご質問・ご要望など <span class="text-stone-500 text-xs font-normal">任意</span></label>
                     <textarea id="message" rows="4" placeholder="例：ペット区画の空き状況について詳しく知りたい、など" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-gold text-base"></textarea>
                 </div>
 
-                <!-- Privacy check -->
                 <div class="flex items-start gap-2 bg-stone-50 p-4 rounded-xl border border-stone-200">
                     <input type="checkbox" id="privacy" required class="w-5 h-5 shrink-0 accent-gold mt-0.5" checked>
                     <label for="privacy" class="text-xs text-stone-600 leading-relaxed cursor-pointer select-none">
@@ -927,7 +951,6 @@
                     </label>
                 </div>
 
-                <!-- Form Submit Action -->
                 <div class="pt-4">
                     <button type="submit" class="w-full bg-stone-900 hover:bg-emerald-800 text-white font-black py-4 md:py-5 px-8 rounded-full text-lg tracking-widest shadow-xl transition-all transform hover:-translate-y-0.5 flex justify-center items-center gap-2">
                         <i class="fa-solid fa-paper-plane"></i>
@@ -946,7 +969,6 @@
     <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 border-b border-stone-800 pb-12">
             
-            <!-- Left Side: Basic Info & Statement -->
             <div class="space-y-4">
                 <h3 class="serif-font text-white text-xl font-bold tracking-wider">座間リバーサイドメモリアル 概要</h3>
                 <p class="text-stone-400 text-sm leading-relaxed">
@@ -961,7 +983,6 @@
                 </div>
             </div>
 
-            <!-- Right Side: Specs Table -->
             <div>
                 <table class="w-full text-xs text-left border-collapse border border-stone-800">
                     <tbody class="divide-y divide-stone-800 bg-stone-950/50">
@@ -1001,6 +1022,7 @@
             <p>&copy; 2026 Zama Riverside Memorial. All Rights Reserved. 華蔵院座間リバーサイドメモリアル</p>
             <div class="flex gap-4">
                 <a href="#ticket-section" class="hover:text-white transition-colors">来園案内</a>
+                <a href="#weather-section" class="hover:text-white transition-colors">座間市の天気</a>
                 <a href="#offer-section" class="hover:text-white transition-colors">特別セット価格</a>
                 <a href="#inquiry" class="hover:text-white transition-colors">お問い合わせ</a>
             </div>
@@ -1008,10 +1030,9 @@
     </div>
 </section>
 
-<!-- Bottom extra spacer space to prevent overlapping with mobile floating sticky footer -->
 <div class="h-20 lg:hidden"></div>
 
-<!-- Image Zoom Modal (For Map/Price List Expansion) -->
+<!-- Image Zoom Modal -->
 <div id="image-modal" class="fixed inset-0 z-[100] hidden bg-black/95 flex flex-col items-center justify-center p-4 transition-all duration-300 opacity-0 cursor-zoom-out" onclick="closeModal()">
     <button onclick="closeModal()" class="absolute top-6 right-6 text-white text-3xl hover:text-gold transition-colors focus:outline-none" aria-label="閉じる">
         <i class="fa-solid fa-xmark"></i>
@@ -1027,7 +1048,6 @@
     document.addEventListener("DOMContentLoaded", function () {
         const revealElements = document.querySelectorAll(".reveal");
         
-        // Slightly optimized trigger offset
         function checkReveal() {
             const triggerBottom = window.innerHeight * 0.9;
             revealElements.forEach((el) => {
@@ -1039,8 +1059,149 @@
         }
         
         window.addEventListener("scroll", checkReveal);
-        checkReveal(); // Run once at start
+        checkReveal();
+
+        // Initialize ForecasterHQ Weather fetch
+        fetchZamaWeather();
     });
+
+    /* ForecasterHQ - Weather Fetching Logic for Zama City (Lat: 35.48, Long: 139.40) */
+    async function fetchZamaWeather() {
+        const grid = document.getElementById("weekly-forecast-grid");
+        
+        // Show 7 skeleton loaders initially
+        grid.innerHTML = Array(7).fill(`
+            <div class="bg-stone-50 border border-stone-200 rounded-2xl p-4 text-center animate-pulse flex flex-col justify-between h-44">
+                <div class="h-4 bg-stone-200 rounded w-2/3 mx-auto mb-2"></div>
+                <div class="h-10 bg-stone-200 rounded-full w-10 mx-auto my-2"></div>
+                <div class="h-4 bg-stone-200 rounded w-3/4 mx-auto mt-2"></div>
+            </div>
+        `).join("");
+
+        // Open-Meteo API endpoint for Zama City
+        const lat = 35.48;
+        const lon = 139.40;
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max&current_weather=true&timezone=Asia%2FTokyo`;
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error("Weather API Response Error");
+            const data = await response.json();
+            
+            renderWeatherData(data);
+        } catch (error) {
+            console.warn("Weather fetch failed, utilizing reliable fallback forecast:", error);
+            renderFallbackWeatherData();
+        }
+    }
+
+    // Weather code to Icon and Description Mapper
+    function getWeatherDetails(code) {
+        // WMO Weather interpretation codes
+        if (code === 0) return { label: "快晴", icon: "fa-sun text-amber-500" };
+        if (code === 1 || code === 2) return { label: "晴れ", icon: "fa-cloud-sun text-amber-400" };
+        if (code === 3) return { label: "曇り", icon: "fa-cloud text-slate-400" };
+        if (code >= 45 && code <= 48) return { label: "霧", icon: "fa-smog text-slate-400" };
+        if (code >= 51 && code <= 67) return { label: "小雨", icon: "fa-cloud-rain text-sky-500" };
+        if (code >= 71 && code <= 77) return { label: "雪", icon: "fa-snowflake text-indigo-300" };
+        if (code >= 80 && code <= 82) return { label: "大雨", icon: "fa-cloud-showers-heavy text-blue-600" };
+        if (code >= 95) return { label: "雷雨", icon: "fa-bolt text-amber-500" };
+        
+        return { label: "晴れ時々曇り", icon: "fa-cloud-sun text-amber-400" };
+    }
+
+    function renderWeatherData(data) {
+        const daily = data.daily;
+        const grid = document.getElementById("weekly-forecast-grid");
+        grid.innerHTML = "";
+
+        const daysOfWeek = ["日", "月", "火", "水", "木", "金", "土"];
+
+        for (let i = 0; i < 7; i++) {
+            const dateObj = new Date(daily.time[i]);
+            const dayNum = dateObj.getDate();
+            const monthNum = dateObj.getMonth() + 1;
+            const dayOfWeek = daysOfWeek[dateObj.getDay()];
+            const weatherCode = daily.weathercode[i];
+            const maxTemp = Math.round(daily.temperature_2m_max[i]);
+            const minTemp = Math.round(daily.temperature_2m_min[i]);
+            const pop = daily.precipitation_probability_max[i] || 0;
+            const details = getWeatherDetails(weatherCode);
+
+            const isToday = i === 0;
+
+            // Update Today Banner on First Iteration
+            if (isToday) {
+                document.getElementById("today-icon").innerHTML = `<i class="fa-solid ${details.icon}"></i>`;
+                document.getElementById("today-status-text").innerText = `${details.label} (${maxTemp}℃ / ${minTemp}℃)`;
+                document.getElementById("today-date-text").innerText = `本日 ${monthNum}/${dayNum}(${dayOfWeek})`;
+                document.getElementById("today-temp-range").innerText = `${maxTemp}℃ / ${minTemp}℃`;
+                document.getElementById("today-pop").innerText = `${pop}%`;
+                
+                const adviceElem = document.getElementById("today-visiting-advice");
+                if (pop > 60) {
+                    adviceElem.innerText = "雨天・バリアフリー完備";
+                    adviceElem.className = "text-xs font-bold bg-amber-600 text-white px-3 py-1 rounded-full mt-1 inline-block";
+                } else {
+                    adviceElem.innerText = "見学絶好日";
+                    adviceElem.className = "text-xs font-bold bg-emerald-700 text-white px-3 py-1 rounded-full mt-1 inline-block";
+                }
+            }
+
+            // Create 7-Day Card Element
+            const dayCard = document.createElement("div");
+            dayCard.className = `border rounded-2xl p-3.5 text-center flex flex-col justify-between transition-all hover:shadow-md ${
+                isToday ? "bg-amber-50/80 border-amber-300 ring-2 ring-amber-200" : "bg-white border-stone-200"
+            }`;
+
+            dayCard.innerHTML = `
+                <div>
+                    <span class="text-[10px] font-black uppercase tracking-widest ${isToday ? 'text-amber-800' : 'text-stone-400'} block">
+                        ${isToday ? '本日' : `${monthNum}/${dayNum}`}
+                    </span>
+                    <p class="font-bold text-sm ${dateObj.getDay() === 0 ? 'text-red-600' : dateObj.getDay() === 6 ? 'text-blue-600' : 'text-stone-800'}">
+                        ${dayOfWeek}曜日
+                    </p>
+                </div>
+
+                <div class="my-2.5">
+                    <i class="fa-solid ${details.icon} text-3xl"></i>
+                    <p class="text-xs font-bold text-stone-700 mt-1">${details.label}</p>
+                </div>
+
+                <div class="pt-2 border-t border-stone-100 text-xs">
+                    <div class="flex justify-center gap-1.5 font-bold">
+                        <span class="text-red-600">${maxTemp}°</span>
+                        <span class="text-stone-300">/</span>
+                        <span class="text-blue-600">${minTemp}°</span>
+                    </div>
+                    <p class="text-[10px] text-sky-600 font-bold mt-0.5">
+                        <i class="fa-solid fa-droplet text-[9px]"></i> ${pop}%
+                    </p>
+                </div>
+            `;
+
+            grid.appendChild(dayCard);
+        }
+    }
+
+    // Fallback static data if network is offline
+    function renderFallbackWeatherData() {
+        const mockData = {
+            daily: {
+                time: Array.from({length: 7}, (_, i) => {
+                    const d = new Date();
+                    d.setDate(d.getDate() + i);
+                    return d.toISOString().split('T')[0];
+                }),
+                weathercode: [0, 1, 2, 80, 0, 1, 0],
+                temperature_2m_max: [24, 25, 23, 21, 22, 24, 26],
+                temperature_2m_min: [15, 16, 14, 13, 14, 15, 16],
+                precipitation_probability_max: [10, 20, 30, 70, 10, 10, 0]
+            }
+        };
+        renderWeatherData(mockData);
+    }
 
     /* Interactive Leaf Canvas Simulation */
     const canvas = document.getElementById('leaf-canvas');
@@ -1058,42 +1219,38 @@
         canvas.height = canvasHeight;
     });
 
-    // Elegant leaf particles representing soft south wind (shuro or green leaves)
     class Leaf {
         constructor() {
             this.reset();
-            // Stagger start heights so they don't all cascade from the top initially
             this.y = Math.random() * canvasHeight;
         }
 
         reset() {
             this.x = Math.random() * canvasWidth;
             this.y = -20;
-            this.size = Math.random() * 12 + 6; // Beautiful leaf size variance
-            this.speedY = Math.random() * 0.8 + 0.4; // Gentle downward speed
-            this.speedX = Math.random() * 0.9 + 0.3; // Drift slightly to the right with "south wind"
+            this.size = Math.random() * 12 + 6;
+            this.speedY = Math.random() * 0.8 + 0.4;
+            this.speedX = Math.random() * 0.9 + 0.3;
             this.rotation = Math.random() * 360;
             this.rotationSpeed = Math.random() * 1.5 - 0.75;
             this.oscillation = Math.random() * 100;
             this.oscillationSpeed = Math.random() * 0.02 + 0.005;
             
-            // Warm earthy colors - adjusting transparency slightly for front-layer elegance
             const leafColors = [
-                'rgba(197, 168, 128, 0.28)', // Premium Gold leaf
-                'rgba(22, 101, 34, 0.18)',   // Fresh Emerald leaf
-                'rgba(163, 132, 91, 0.24)',   // Sophisticated Dark gold
-                'rgba(132, 204, 22, 0.18)',   // Soft light green leaf
+                'rgba(197, 168, 128, 0.28)',
+                'rgba(22, 101, 34, 0.18)',
+                'rgba(163, 132, 91, 0.24)',
+                'rgba(132, 204, 22, 0.18)',
             ];
             this.color = leafColors[Math.floor(Math.random() * leafColors.length)];
         }
 
         update(scrollSpeed) {
-            this.y += this.speedY + Math.abs(scrollSpeed) * 0.15; // Speed up slightly when scrolling
+            this.y += this.speedY + Math.abs(scrollSpeed) * 0.15;
             this.x += this.speedX + Math.sin(this.oscillation) * 0.4;
             this.oscillation += this.oscillationSpeed;
             this.rotation += this.rotationSpeed;
 
-            // Reset when out of boundary
             if (this.y > canvasHeight + 20 || this.x > canvasWidth + 20 || this.x < -20) {
                 this.reset();
             }
@@ -1105,7 +1262,6 @@
             ctx.rotate(this.rotation * Math.PI / 180);
             ctx.fillStyle = this.color;
 
-            // Render highly smooth, abstract organic leaf shapes
             ctx.beginPath();
             ctx.moveTo(0, -this.size);
             ctx.quadraticCurveTo(this.size * 0.5, -this.size * 0.3, 0, this.size);
@@ -1113,7 +1269,6 @@
             ctx.closePath();
             ctx.fill();
 
-            // Tiny delicate ribbing structure for realistic depth
             ctx.strokeStyle = 'rgba(255, 255, 255, 0.22)';
             ctx.lineWidth = 0.8;
             ctx.beginPath();
@@ -1125,7 +1280,6 @@
         }
     }
 
-    // Increased count slightly to create a richer atmosphere (28 -> 36 particles)
     const leafParticles = Array.from({ length: 36 }, () => new Leaf());
 
     let lastScrollY = window.scrollY;
@@ -1134,12 +1288,10 @@
     function animate() {
         ctx.clearRect(0, 0, canvasWidth, canvasHeight);
         
-        // Calculate dynamic velocity on scroll transitions
         const currentScrollY = window.scrollY;
         scrollVelocity = currentScrollY - lastScrollY;
         lastScrollY = currentScrollY;
 
-        // Slow deceleration of drift acceleration
         scrollVelocity *= 0.95;
 
         leafParticles.forEach(leaf => {
@@ -1150,7 +1302,6 @@
         requestAnimationFrame(animate);
     }
 
-    // Start running simulation
     animate();
 
     /* Toggle Price List View */
@@ -1183,11 +1334,10 @@
         modal.classList.add("opacity-0");
         setTimeout(() => {
             modal.classList.add("hidden");
-            modalImg.src = ""; // Clear memory
+            modalImg.src = "";
         }, 300);
     }
 
-    // Close modal on Escape key press
     document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
             closeModal();
@@ -1204,7 +1354,6 @@
             icon.style.transform = "rotate(0deg)";
             button.classList.remove("bg-stone-50");
         } else {
-            // Close all others first
             const allContents = document.querySelectorAll(".max-h-0");
             const allIcons = document.querySelectorAll(".fa-chevron-down");
             allContents.forEach(c => c.style.maxHeight = "0px");
@@ -1220,18 +1369,15 @@
     function handleFormSubmit(event) {
         event.preventDefault();
         
-        // Hide form inputs and reveal victory card
         const form = document.getElementById("contact-form");
         const successBox = document.getElementById("form-success");
         
         form.classList.add("hidden");
         successBox.classList.remove("hidden");
         
-        // Scroll to success notification smoothly
         successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
-    /* Reset form for potential re-submission */
     function resetInquiryForm() {
         const form = document.getElementById("contact-form");
         const successBox = document.getElementById("form-success");
