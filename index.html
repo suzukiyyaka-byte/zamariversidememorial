@@ -799,88 +799,29 @@
     </div>
 </section>
 
-<!-- ForecasterHQ: Zama City Weekly Weather Forecast Section -->
-<section id="weather-section" class="py-16 px-4 bg-gradient-to-b from-stone-50 via-sky-50/30 to-stone-100 border-t border-b border-stone-200 relative z-20">
-    <div class="max-w-6xl mx-auto">
+<!-- Weather News Link Button Section (Inserted between Access & Inquiry) -->
+<section class="py-12 px-4 bg-gradient-to-r from-amber-50/80 via-sky-50/80 to-blue-50/80 border-y border-amber-200/60 relative z-20">
+    <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-amber-100 text-amber-900 font-bold text-xs px-3.5 py-1.5 rounded-full mb-3 shadow-sm border border-amber-200">
+            <i class="fa-solid fa-cloud-sun text-amber-600 text-sm"></i>
+            <span>ご来園・お参り前のチェックに</span>
+        </div>
+        <h3 class="serif-font text-xl md:text-2xl font-bold text-stone-800 mb-2">
+            座間市の週間天気予報（ウェザーニュース）
+        </h3>
+        <p class="text-stone-600 text-xs md:text-sm mb-6 max-w-lg mx-auto leading-relaxed">
+            座間リバーサイドメモリアルは相模川沿いの陽当たりの良い平坦地にございます。<br>ご見学やお参りのお日にちのご検討にぜひご活用ください。
+        </p>
         
-        <!-- Header -->
-        <div class="text-center mb-10">
-            <span class="inline-flex items-center gap-1.5 bg-sky-100 text-riverblue-900 font-bold text-xs px-3 py-1 rounded-full border border-sky-200 mb-2 shadow-sm">
-                <i class="fa-solid fa-cloud-sun text-riverblue-800"></i>
-                ForecasterHQ ライブウェザー
-            </span>
-            <h2 class="serif-font text-3xl font-black text-stone-900">座間市の週間天気予報</h2>
-            <p class="text-stone-600 mt-2 text-sm md:text-base">ご見学・お参りのご予定にお役立てください（管理事務所は雨天時も営業・案内中）</p>
-            <div class="w-20 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
-        </div>
-
-        <!-- Weather Main Card -->
-        <div class="bg-white/90 backdrop-blur-md border border-stone-200 rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden">
-            <!-- Background Decorative Element -->
-            <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-sky-100/50 rounded-full blur-2xl pointer-events-none"></div>
-
-            <!-- Current & Today Highlight Banner -->
-            <div id="weather-today-banner" class="bg-gradient-to-r from-riverblue-900 via-riverblue-800 to-stone-800 rounded-2xl p-6 text-white shadow-md mb-8 flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="flex items-center gap-5">
-                    <div id="today-icon" class="text-5xl text-amber-300 drop-shadow-md">
-                        <i class="fa-solid fa-spinner animate-spin"></i>
-                    </div>
-                    <div>
-                        <div class="flex items-center gap-2">
-                            <span class="bg-white/20 text-xs px-2.5 py-0.5 rounded-full font-bold">神奈川県座間市新田宿</span>
-                            <span class="text-xs text-sky-200" id="today-date-text">リアルタイム気象データ</span>
-                        </div>
-                        <h3 class="serif-font text-2xl md:text-3xl font-bold mt-1" id="today-status-text">天気予報を取得中...</h3>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-6 border-t md:border-t-0 md:border-l border-white/20 pt-4 md:pt-0 md:pl-6 text-center md:text-right w-full md:w-auto justify-around md:justify-end">
-                    <div>
-                        <p class="text-xs text-sky-200">最高 / 最低</p>
-                        <p class="text-xl md:text-2xl font-black" id="today-temp-range">--℃ / --℃</p>
-                    </div>
-                    <div>
-                        <p class="text-xs text-sky-200">降水確率</p>
-                        <p class="text-xl md:text-2xl font-black text-sky-300" id="today-pop">--%</p>
-                    </div>
-                    <div>
-                        <p class="text-xs text-sky-200">現地見学</p>
-                        <p class="text-sm font-bold bg-emerald-700 text-white px-3 py-1 rounded-full mt-1 inline-block" id="today-visiting-advice">雨天対応可</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 7-Day Forecast Grid -->
-            <div>
-                <h4 class="text-xs font-bold text-stone-500 uppercase tracking-wider mb-4 flex items-center gap-2">
-                    <i class="fa-regular fa-calendar-days text-gold-dark"></i> 今後7日間の天気予報
-                </h4>
-                
-                <div id="weekly-forecast-grid" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
-                    <!-- Skeleton Loader State -->
-                    <template id="weather-skeleton">
-                        <div class="bg-stone-50 border border-stone-200 rounded-2xl p-4 text-center animate-pulse flex flex-col justify-between h-40">
-                            <div class="h-4 bg-stone-200 rounded w-2/3 mx-auto"></div>
-                            <div class="h-8 bg-stone-200 rounded-full w-8 h-8 mx-auto"></div>
-                            <div class="h-4 bg-stone-200 rounded w-3/4 mx-auto"></div>
-                        </div>
-                    </template>
-                </div>
-            </div>
-
-            <!-- Footer Advice & ForecasterHQ Watermark -->
-            <div class="mt-8 pt-6 border-t border-stone-200/80 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-600">
-                <div class="flex items-center gap-2 text-stone-700 font-bold bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-100">
-                    <i class="fa-solid fa-umbrella text-emerald-800"></i>
-                    <span>座間リバーサイドメモリアルはバリアフリー設計のため、雨天時もお足元を気にせず安心してお参りいただけます。</span>
-                </div>
-                <div class="flex items-center gap-1.5 text-stone-400 font-medium">
-                    <i class="fa-solid fa-satellite text-[10px]"></i>
-                    <span>Powered by ForecasterHQ & Open-Meteo API</span>
-                </div>
-            </div>
-
-        </div>
+        <!-- Requested Weather Forecast Link Button -->
+        <a href="https://weathernews.jp/onebox/tenki/kanagawa/14216/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 hover:from-sky-700 hover:via-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 md:px-10 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all text-base md:text-lg group border border-sky-400/30">
+            <i class="fa-solid fa-cloud-sun text-2xl text-amber-300 group-hover:rotate-12 transition-transform"></i>
+            <span class="tracking-wide">霊園の今週の天気を確認</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-80 ml-1"></i>
+        </a>
+        <p class="text-[11px] text-stone-500 mt-3">
+            ※ウェザーニュース（神奈川県座間市のピンポイント週間天気）の外部サイトが開きます
+        </p>
     </div>
 </section>
 
